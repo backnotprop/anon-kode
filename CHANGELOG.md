@@ -1,5 +1,27 @@
 # Changelog
 
+## [v0.0.51]
+- Added support for Azure OpenAI Service
+  - Created a configuration flow for Azure with resource name and deployment name
+  - Updated API calls to use Azure-specific endpoints and authentication headers
+- Improved Ollama integration
+  - Added dedicated server URL configuration screen
+  - Enhanced error handling and user feedback for connection issues
+  - Fixed model loading to properly display error messages
+  - Updated to use the correct Ollama API endpoints
+
+## [v0.0.50]
+- unhide some internal commands like log and context
+
+## [v0.0.49]
+- @yannbam fix import path [81](https://github.com/dnakov/anon-kode/pull/81)
+
+## [v0.0.48]
+- reset null reasoning effort if model doesn't support it
+
+## [v0.0.47]
+- more null checks
+
 ## [v0.0.46]
 - null check for no api keys required
 

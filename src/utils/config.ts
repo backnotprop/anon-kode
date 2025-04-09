@@ -95,6 +95,7 @@ export type ProviderType =
   | 'groq'
   | 'gemini'
   | 'ollama'
+  | 'azure'
   | 'custom'
 
 export type AccountInfo = {
@@ -370,8 +371,8 @@ function getConfig<A>(
         delete parsedConfig.largeModelApiKey
       }
 
-      parsedConfig.smallModelApiKeys = parsedConfig.smallModelApiKeys.filter(key => key !== '') || []
-      parsedConfig.largeModelApiKeys = parsedConfig.largeModelApiKeys.filter(key => key !== '') || []
+      parsedConfig.smallModelApiKeys = parsedConfig.smallModelApiKeys?.filter(key => key !== '') || []
+      parsedConfig.largeModelApiKeys = parsedConfig.largeModelApiKeys?.filter(key => key !== '') || []
 
       return {
         ...cloneDeep(defaultConfig),
